@@ -42,11 +42,12 @@ struct ContentView: View {
         Todo(id: 17, title: "Seventeen Task", userId: 17, completed: false)
     ]
     
-    let data = Alamofire.request("https://jsonplaceholder.typicode.com/todos/").responseJSON { response in
-        if let result = response.result.value {
-            let JSONData = JSON(result)
-            print(JSONData)
-        }
+    let data = Alamofire.request("https://jsonplaceholder.typicode.com/todos/")
+        .responseJSON { response in
+            if let result = response.result.value {
+                let JSONData = JSON(result)
+                print(JSONData)
+            }
     }
 
     var body: some View {
@@ -57,7 +58,8 @@ struct ContentView: View {
                         HStack {
                             Text(todo.title)
                             Spacer()
-                            Text(todo.completed ? "✅" : "❌")
+                            Button(action: { self.toggleTodo(index: todo.id-1) })
+                            { Text(todo.completed ? "✅" : "❌") }
                         }
                     }
                 }.navigationBarTitle("Todo Tasks")
@@ -103,6 +105,10 @@ struct ContentView: View {
                 }
                 .tag(3)
         }
+    }
+    
+    func toggleTodo(index: Int) {
+        self.todos[index].completed = !self.todos[index].completed
     }
     
     func resetCount() {
