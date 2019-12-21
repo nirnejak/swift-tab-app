@@ -26,18 +26,18 @@ struct ContentView: View {
         Todo(id: 1, title: "First Task", userId: 1, completed: false),
         Todo(id: 2, title: "Second Task", userId: 2, completed: true),
         Todo(id: 3, title: "Third Task", userId: 3, completed: false),
-        Todo(id: 4, title: "Fourth Task", userId: 4, completed: true),
-        Todo(id: 5, title: "Fifth Task", userId: 5, completed: false),
+        Todo(id: 4, title: "Fourth Task", userId: 4, completed: false),
+        Todo(id: 5, title: "Fifth Task", userId: 5, completed: true),
         Todo(id: 6, title: "Sixth Task", userId: 6, completed: true),
         Todo(id: 7, title: "Seventh Task", userId: 7, completed: false),
         Todo(id: 8, title: "Eight Task", userId: 8, completed: true),
         Todo(id: 9, title: "Nineth Task", userId: 9, completed: false),
-        Todo(id: 10, title: "Tenth Task", userId: 10, completed: true),
+        Todo(id: 10, title: "Tenth Task", userId: 10, completed: false),
         Todo(id: 11, title: "Evelenth Task", userId: 11, completed: false),
         Todo(id: 12, title: "Twelth Task", userId: 12, completed: true),
-        Todo(id: 13, title: "Thirteenth Task", userId: 13, completed: false),
+        Todo(id: 13, title: "Thirteenth Task", userId: 13, completed: true),
         Todo(id: 14, title: "Fourteenth Task", userId: 14, completed: true),
-        Todo(id: 15, title: "Fifteenth Task", userId: 15, completed: false),
+        Todo(id: 15, title: "Fifteenth Task", userId: 15, completed: true),
         Todo(id: 16, title: "Sixteenth Task", userId: 16, completed: true),
         Todo(id: 17, title: "Seventeen Task", userId: 17, completed: false)
     ]
@@ -54,9 +54,13 @@ struct ContentView: View {
             NavigationView {
                 List {
                     ForEach(todos, id: \.id) { todo in
-                        Text(todo.title)
+                        HStack {
+                            Text(todo.title)
+                            Spacer()
+                            Text(todo.completed ? "✅" : "❌")
+                        }
                     }
-                }.navigationBarTitle("List View")
+                }.navigationBarTitle("Todo Tasks")
             }
                 .tabItem {
                     VStack {
@@ -79,12 +83,15 @@ struct ContentView: View {
                 .tag(1)
             VStack {
                 Spacer()
-                Text("Counter View").font(.title)
-                Text("Count: \(count)")
+                Text("\(self.count)").font(.title)
+                Text("Counter")
                 Spacer()
                 HStack {
+                    Spacer()
                     Button(action: { self.resetCount() }) { Text("Reset Count") }
+                    Spacer()
                     Button(action: { self.incrementCount() }) { Text("Increment Count") }
+                    Spacer()
                 }
                 Spacer()
             }
