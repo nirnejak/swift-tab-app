@@ -7,35 +7,62 @@
 //
 
 import SwiftUI
+import Foundation
+import Alamofire
+import SwiftyJSON
+
+struct Result: Codable, Equatable, Identifiable {
+    var id: Int
+    var title: String
+    var userId: Int
+    var completed: Bool
+}
 
 struct ContentView: View {
     @State private var selection = 0
     @State private var count = 0
-    @State private var users = [
-        ["id": 1, "name": "Jitendra", "age": 21],
-        ["id": 2, "name": "Jaskaran", "age": 23],
-        ["id": 3, "name": "Rupinder", "age": 24],
+    
+    @State public var todos:[Result] = []
+    @State private var todosAll:[Result] = [
+        Result(id: 1, title: "First Task", userId: 1, completed: false),
+        Result(id: 2, title: "Second Task", userId: 2, completed: true),
+        Result(id: 3, title: "Third Task", userId: 3, completed: false),
+        Result(id: 4, title: "Fourth Task", userId: 4, completed: true),
+        Result(id: 5, title: "Fifth Task", userId: 5, completed: false),
+        Result(id: 6, title: "Sixth Task", userId: 6, completed: true),
+        Result(id: 7, title: "Seventh Task", userId: 7, completed: false),
+        Result(id: 8, title: "Eight Task", userId: 8, completed: true),
+        Result(id: 9, title: "Nineth Task", userId: 9, completed: false),
+        Result(id: 10, title: "Tenth Task", userId: 10, completed: true),
+        Result(id: 11, title: "Evelenth Task", userId: 11, completed: false),
+        Result(id: 12, title: "Twelth Task", userId: 12, completed: true),
+        Result(id: 13, title: "Thirteenth Task", userId: 13, completed: false),
+        Result(id: 14, title: "Fourteenth Task", userId: 14, completed: true),
+        Result(id: 15, title: "Fifteenth Task", userId: 15, completed: false),
+        Result(id: 16, title: "Sixteenth Task", userId: 16, completed: true),
+        Result(id: 17, title: "Seventeen Task", userId: 17, completed: false)
     ]
 
- 
     var body: some View {
         TabView(selection: $selection){
             NavigationView {
                 List {
-                    ForEach(1..<100) { number in
-                        Text("List Item \(number)")
+                    ForEach(todosAll, id: \.id) { todo in
+                        Text(todo.title)
                     }
                 }.navigationBarTitle("List View")
             }
                 .tabItem {
                     VStack {
                         Image("first")
-                        Text("First")
+                        Text("List")
                     }
                 }
                 .tag(0)
-            Text("Second View")
-                .font(.title)
+            VStack {
+                Text("Data Fetch").font(.title).background(Color.blue).padding(10)
+                Button(action: { self.fetchData() }) { Text("Fetch Data") }
+            }
                 .tabItem {
                     VStack {
                         Image("second")
@@ -49,14 +76,8 @@ struct ContentView: View {
                 Text("Count: \(count)")
                 Spacer()
                 HStack {
-                    Button(action: {
-                        // print("Reset Count")
-                        self.count = 0
-                    }) { Text("Reset Count") }
-                    Button(action: {
-                        // print("Count Incremented")
-                        self.count += 1
-                    }) { Text("Increment Count") }
+                    Button(action: { self.resetCount() }) { Text("Reset Count") }
+                    Button(action: { self.incrementCount() }) { Text("Increment Count") }
                 }
                 Spacer()
             }
@@ -67,6 +88,24 @@ struct ContentView: View {
                     }
                 }
                 .tag(3)
+        }
+    }
+    
+    func resetCount() {
+        count = 0
+    }
+    
+    func incrementCount() {
+        count += 1
+    }
+    
+    func fetchData() {
+        var todos:JSON = []
+        Alamofire.request("https://jsonplaceholder.typicode.com/todos/").responseJSON { response in
+            if let result = response.result.value {
+                todos = JSON(result)
+                print(todos)
+            }
         }
     }
 }
