@@ -12,15 +12,21 @@ struct ContentView: View {
     @State private var selection = 0
     @State private var count = 0
     @State private var users = [
-        ["name": "Jitendra", "age": 21],
-        ["name": "Jaskaran", "age": 23],
-        ["name": "Rupinder", "age": 24],
+        ["id": 1, "name": "Jitendra", "age": 21],
+        ["id": 2, "name": "Jaskaran", "age": 23],
+        ["id": 3, "name": "Rupinder", "age": 24],
     ]
 
  
     var body: some View {
         TabView(selection: $selection){
-            Text("Fist View")
+            NavigationView {
+                List {
+                    ForEach(1..<100) { number in
+                        Text("List Item \(number)")
+                    }
+                }.navigationBarTitle("List View")
+            }
                 .tabItem {
                     VStack {
                         Image("first")
@@ -41,6 +47,7 @@ struct ContentView: View {
                 Spacer()
                 Text("Counter View").font(.title)
                 Text("Count: \(count)")
+                Spacer()
                 HStack {
                     Button(action: {
                         // print("Reset Count")
