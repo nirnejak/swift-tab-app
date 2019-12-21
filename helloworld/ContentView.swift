@@ -41,6 +41,13 @@ struct ContentView: View {
         Todo(id: 16, title: "Sixteenth Task", userId: 16, completed: true),
         Todo(id: 17, title: "Seventeen Task", userId: 17, completed: false)
     ]
+    
+    let data = Alamofire.request("https://jsonplaceholder.typicode.com/todos/").responseJSON { response in
+        if let result = response.result.value {
+            let JSONData = JSON(result)
+            print(JSONData)
+        }
+    }
 
     var body: some View {
         TabView(selection: $selection){
@@ -59,8 +66,9 @@ struct ContentView: View {
                 }
                 .tag(0)
             VStack {
-                Text("Data Fetch").font(.title).background(Color.blue).padding(10)
-                Button(action: { self.fetchData() }) { Text("Fetch Data") }
+                Text("Data Fetch").font(.title).padding(100)
+                Button(action: { print("Second View Button Clicked") }) { Text("Action Button") }
+                Rectangle()
             }
                 .tabItem {
                     VStack {
@@ -96,16 +104,6 @@ struct ContentView: View {
     
     func incrementCount() {
         count += 1
-    }
-    
-    func fetchData() {
-        var todos:JSON = []
-        Alamofire.request("https://jsonplaceholder.typicode.com/todos/").responseJSON { response in
-            if let result = response.result.value {
-                todos = JSON(result)
-                print(todos)
-            }
-        }
     }
 }
 
