@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1599E3F4AE2ADABD56AAEEB3 /* Pods_helloworldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8491C4960DC244213493E38B /* Pods_helloworldTests.framework */; };
+		4334AB90781869BFACEBEB52 /* Pods_helloworld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8E1D6AE338089EF6701BB9 /* Pods_helloworld.framework */; };
+		4A7E313A94FF7B7635D3BD7E /* Pods_helloworld_helloworldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9A3C66DFFEC872F498DC78 /* Pods_helloworld_helloworldUITests.framework */; };
 		CCDA38B623AE2E9E0014246C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA38B523AE2E9E0014246C /* AppDelegate.swift */; };
 		CCDA38B823AE2E9E0014246C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA38B723AE2E9E0014246C /* SceneDelegate.swift */; };
 		CCDA38BB23AE2E9E0014246C /* helloworld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCDA38B923AE2E9E0014246C /* helloworld.xcdatamodeld */; };
@@ -16,8 +19,8 @@
 		CCDA38C523AE2EA00014246C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCDA38C323AE2EA00014246C /* LaunchScreen.storyboard */; };
 		CCDA38D023AE2EA10014246C /* helloworldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA38CF23AE2EA10014246C /* helloworldTests.swift */; };
 		CCDA38DB23AE2EA10014246C /* helloworldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA38DA23AE2EA10014246C /* helloworldUITests.swift */; };
-		CCDA38EC23AE6E110014246C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CCDA38EB23AE6E110014246C /* Alamofire */; };
-		CCDA38EF23AE6E2B0014246C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CCDA38EE23AE6E2B0014246C /* SwiftyJSON */; };
+		CCDA38EC23AE6E110014246C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CCDA38EB23AE6E110014246C /* SwiftPackageProductDependency */; };
+		CCDA38EF23AE6E2B0014246C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CCDA38EE23AE6E2B0014246C /* SwiftPackageProductDependency */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07AEC20BBDEB2BE799E5C482 /* Pods-helloworld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworld.debug.xcconfig"; path = "Target Support Files/Pods-helloworld/Pods-helloworld.debug.xcconfig"; sourceTree = "<group>"; };
+		082BF72E0ED122EB87187F07 /* Pods-helloworldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworldTests.release.xcconfig"; path = "Target Support Files/Pods-helloworldTests/Pods-helloworldTests.release.xcconfig"; sourceTree = "<group>"; };
+		5ECA6F683DBA35D801C7029E /* Pods-helloworld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworld.release.xcconfig"; path = "Target Support Files/Pods-helloworld/Pods-helloworld.release.xcconfig"; sourceTree = "<group>"; };
+		5ED4B106505C05D759F89FFC /* Pods-helloworldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworldTests.debug.xcconfig"; path = "Target Support Files/Pods-helloworldTests/Pods-helloworldTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8491C4960DC244213493E38B /* Pods_helloworldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloworldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E8E1D6AE338089EF6701BB9 /* Pods_helloworld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloworld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2C2A6D849B9946A53D7F34A /* Pods-helloworld-helloworldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworld-helloworldUITests.release.xcconfig"; path = "Target Support Files/Pods-helloworld-helloworldUITests/Pods-helloworld-helloworldUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC9A3C66DFFEC872F498DC78 /* Pods_helloworld_helloworldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_helloworld_helloworldUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDA38B223AE2E9E0014246C /* helloworld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helloworld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDA38B523AE2E9E0014246C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCDA38B723AE2E9E0014246C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +64,7 @@
 		CCDA38D623AE2EA10014246C /* helloworldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = helloworldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDA38DA23AE2EA10014246C /* helloworldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helloworldUITests.swift; sourceTree = "<group>"; };
 		CCDA38DC23AE2EA10014246C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF7F72B7FE804299F681EF62 /* Pods-helloworld-helloworldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworld-helloworldUITests.debug.xcconfig"; path = "Target Support Files/Pods-helloworld-helloworldUITests/Pods-helloworld-helloworldUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +72,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCDA38EF23AE6E2B0014246C /* SwiftyJSON in Frameworks */,
-				CCDA38EC23AE6E110014246C /* Alamofire in Frameworks */,
+				CCDA38EF23AE6E2B0014246C /* BuildFile in Frameworks */,
+				CCDA38EC23AE6E110014246C /* BuildFile in Frameworks */,
+				4334AB90781869BFACEBEB52 /* Pods_helloworld.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1599E3F4AE2ADABD56AAEEB3 /* Pods_helloworldTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +90,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A7E313A94FF7B7635D3BD7E /* Pods_helloworld_helloworldUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24F30F8867C0052E18AECB18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07AEC20BBDEB2BE799E5C482 /* Pods-helloworld.debug.xcconfig */,
+				5ECA6F683DBA35D801C7029E /* Pods-helloworld.release.xcconfig */,
+				FF7F72B7FE804299F681EF62 /* Pods-helloworld-helloworldUITests.debug.xcconfig */,
+				C2C2A6D849B9946A53D7F34A /* Pods-helloworld-helloworldUITests.release.xcconfig */,
+				5ED4B106505C05D759F89FFC /* Pods-helloworldTests.debug.xcconfig */,
+				082BF72E0ED122EB87187F07 /* Pods-helloworldTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6DE4EBCF6B0623B9FBD35676 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E8E1D6AE338089EF6701BB9 /* Pods_helloworld.framework */,
+				CC9A3C66DFFEC872F498DC78 /* Pods_helloworld_helloworldUITests.framework */,
+				8491C4960DC244213493E38B /* Pods_helloworldTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CCDA38A923AE2E9E0014246C = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +128,8 @@
 				CCDA38CE23AE2EA10014246C /* helloworldTests */,
 				CCDA38D923AE2EA10014246C /* helloworldUITests */,
 				CCDA38B323AE2E9E0014246C /* Products */,
+				24F30F8867C0052E18AECB18 /* Pods */,
+				6DE4EBCF6B0623B9FBD35676 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCDA38DF23AE2EA10014246C /* Build configuration list for PBXNativeTarget "helloworld" */;
 			buildPhases = (
+				034D83E8F396E3967469B633 /* [CP] Check Pods Manifest.lock */,
 				CCDA38AE23AE2E9E0014246C /* Sources */,
 				CCDA38AF23AE2E9E0014246C /* Frameworks */,
 				CCDA38B023AE2E9E0014246C /* Resources */,
+				20903AB99359D00E2466874A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,8 +203,8 @@
 			);
 			name = helloworld;
 			packageProductDependencies = (
-				CCDA38EB23AE6E110014246C /* Alamofire */,
-				CCDA38EE23AE6E2B0014246C /* SwiftyJSON */,
+				CCDA38EB23AE6E110014246C /* SwiftPackageProductDependency */,
+				CCDA38EE23AE6E2B0014246C /* SwiftPackageProductDependency */,
 			);
 			productName = helloworld;
 			productReference = CCDA38B223AE2E9E0014246C /* helloworld.app */;
@@ -171,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCDA38E223AE2EA10014246C /* Build configuration list for PBXNativeTarget "helloworldTests" */;
 			buildPhases = (
+				D129159B8007037F55538AD2 /* [CP] Check Pods Manifest.lock */,
 				CCDA38C723AE2EA10014246C /* Sources */,
 				CCDA38C823AE2EA10014246C /* Frameworks */,
 				CCDA38C923AE2EA10014246C /* Resources */,
@@ -189,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCDA38E523AE2EA10014246C /* Build configuration list for PBXNativeTarget "helloworldUITests" */;
 			buildPhases = (
+				3E38E7642BB49AAED8713A68 /* [CP] Check Pods Manifest.lock */,
 				CCDA38D223AE2EA10014246C /* Sources */,
 				CCDA38D323AE2EA10014246C /* Frameworks */,
 				CCDA38D423AE2EA10014246C /* Resources */,
+				D433EF3B1E8C21C444FF2197 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,8 +282,8 @@
 			);
 			mainGroup = CCDA38A923AE2E9E0014246C;
 			packageReferences = (
-				CCDA38EA23AE6E110014246C /* XCRemoteSwiftPackageReference "Alamofire" */,
-				CCDA38ED23AE6E2B0014246C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				CCDA38EA23AE6E110014246C /* RemoteSwiftPackageReference */,
+				CCDA38ED23AE6E2B0014246C /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = CCDA38B323AE2E9E0014246C /* Products */;
 			projectDirPath = "";
@@ -276,6 +322,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		034D83E8F396E3967469B633 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-helloworld-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20903AB99359D00E2466874A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-helloworld/Pods-helloworld-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-helloworld/Pods-helloworld-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-helloworld/Pods-helloworld-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E38E7642BB49AAED8713A68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-helloworld-helloworldUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D129159B8007037F55538AD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-helloworldTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D433EF3B1E8C21C444FF2197 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-helloworld-helloworldUITests/Pods-helloworld-helloworldUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-helloworld-helloworldUITests/Pods-helloworld-helloworldUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-helloworld-helloworldUITests/Pods-helloworld-helloworldUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CCDA38AE23AE2E9E0014246C /* Sources */ = {
@@ -448,6 +597,7 @@
 		};
 		CCDA38E023AE2EA10014246C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07AEC20BBDEB2BE799E5C482 /* Pods-helloworld.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +618,7 @@
 		};
 		CCDA38E123AE2EA10014246C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ECA6F683DBA35D801C7029E /* Pods-helloworld.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -488,6 +639,7 @@
 		};
 		CCDA38E323AE2EA10014246C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ED4B106505C05D759F89FFC /* Pods-helloworldTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +662,7 @@
 		};
 		CCDA38E423AE2EA10014246C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 082BF72E0ED122EB87187F07 /* Pods-helloworldTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -532,6 +685,7 @@
 		};
 		CCDA38E623AE2EA10014246C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF7F72B7FE804299F681EF62 /* Pods-helloworld-helloworldUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +706,7 @@
 		};
 		CCDA38E723AE2EA10014246C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2C2A6D849B9946A53D7F34A /* Pods-helloworld-helloworldUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -612,7 +767,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CCDA38EA23AE6E110014246C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		CCDA38EA23AE6E110014246C /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -620,7 +775,7 @@
 				minimumVersion = 4.9.1;
 			};
 		};
-		CCDA38ED23AE6E2B0014246C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		CCDA38ED23AE6E2B0014246C /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
@@ -631,14 +786,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CCDA38EB23AE6E110014246C /* Alamofire */ = {
+		CCDA38EB23AE6E110014246C /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CCDA38EA23AE6E110014246C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = CCDA38EA23AE6E110014246C /* RemoteSwiftPackageReference */;
 			productName = Alamofire;
 		};
-		CCDA38EE23AE6E2B0014246C /* SwiftyJSON */ = {
+		CCDA38EE23AE6E2B0014246C /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CCDA38ED23AE6E2B0014246C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = CCDA38ED23AE6E2B0014246C /* RemoteSwiftPackageReference */;
 			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */

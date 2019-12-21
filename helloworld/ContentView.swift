@@ -11,7 +11,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-struct Result: Codable, Equatable, Identifiable {
+struct Task: Codable, Equatable, Identifiable {
     var id: Int
     var title: String
     var userId: Int
@@ -22,32 +22,31 @@ struct ContentView: View {
     @State private var selection = 0
     @State private var count = 0
     
-    @State public var todos:[Result] = []
-    @State private var todosAll:[Result] = [
-        Result(id: 1, title: "First Task", userId: 1, completed: false),
-        Result(id: 2, title: "Second Task", userId: 2, completed: true),
-        Result(id: 3, title: "Third Task", userId: 3, completed: false),
-        Result(id: 4, title: "Fourth Task", userId: 4, completed: true),
-        Result(id: 5, title: "Fifth Task", userId: 5, completed: false),
-        Result(id: 6, title: "Sixth Task", userId: 6, completed: true),
-        Result(id: 7, title: "Seventh Task", userId: 7, completed: false),
-        Result(id: 8, title: "Eight Task", userId: 8, completed: true),
-        Result(id: 9, title: "Nineth Task", userId: 9, completed: false),
-        Result(id: 10, title: "Tenth Task", userId: 10, completed: true),
-        Result(id: 11, title: "Evelenth Task", userId: 11, completed: false),
-        Result(id: 12, title: "Twelth Task", userId: 12, completed: true),
-        Result(id: 13, title: "Thirteenth Task", userId: 13, completed: false),
-        Result(id: 14, title: "Fourteenth Task", userId: 14, completed: true),
-        Result(id: 15, title: "Fifteenth Task", userId: 15, completed: false),
-        Result(id: 16, title: "Sixteenth Task", userId: 16, completed: true),
-        Result(id: 17, title: "Seventeen Task", userId: 17, completed: false)
+    @State private var todos:[Task] = [
+        Task(id: 1, title: "First Task", userId: 1, completed: false),
+        Task(id: 2, title: "Second Task", userId: 2, completed: true),
+        Task(id: 3, title: "Third Task", userId: 3, completed: false),
+        Task(id: 4, title: "Fourth Task", userId: 4, completed: true),
+        Task(id: 5, title: "Fifth Task", userId: 5, completed: false),
+        Task(id: 6, title: "Sixth Task", userId: 6, completed: true),
+        Task(id: 7, title: "Seventh Task", userId: 7, completed: false),
+        Task(id: 8, title: "Eight Task", userId: 8, completed: true),
+        Task(id: 9, title: "Nineth Task", userId: 9, completed: false),
+        Task(id: 10, title: "Tenth Task", userId: 10, completed: true),
+        Task(id: 11, title: "Evelenth Task", userId: 11, completed: false),
+        Task(id: 12, title: "Twelth Task", userId: 12, completed: true),
+        Task(id: 13, title: "Thirteenth Task", userId: 13, completed: false),
+        Task(id: 14, title: "Fourteenth Task", userId: 14, completed: true),
+        Task(id: 15, title: "Fifteenth Task", userId: 15, completed: false),
+        Task(id: 16, title: "Sixteenth Task", userId: 16, completed: true),
+        Task(id: 17, title: "Seventeen Task", userId: 17, completed: false)
     ]
 
     var body: some View {
         TabView(selection: $selection){
             NavigationView {
                 List {
-                    ForEach(todosAll, id: \.id) { todo in
+                    ForEach(todos, id: \.id) { todo in
                         Text(todo.title)
                     }
                 }.navigationBarTitle("List View")
