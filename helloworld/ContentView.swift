@@ -10,11 +10,17 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection = 0
+    @State private var count = 0
+    @State private var users = [
+        ["name": "Jitendra", "age": 21],
+        ["name": "Jaskaran", "age": 23],
+        ["name": "Rupinder", "age": 24],
+    ]
+
  
     var body: some View {
         TabView(selection: $selection){
-            Text("First View")
-                .font(.title)
+            Text("Fist View")
                 .tabItem {
                     VStack {
                         Image("first")
@@ -31,6 +37,29 @@ struct ContentView: View {
                     }
                 }
                 .tag(1)
+            VStack {
+                Spacer()
+                Text("Counter View").font(.title)
+                Text("Count: \(count)")
+                HStack {
+                    Button(action: {
+                        // print("Reset Count")
+                        self.count = 0
+                    }) { Text("Reset Count") }
+                    Button(action: {
+                        // print("Count Incremented")
+                        self.count += 1
+                    }) { Text("Increment Count") }
+                }
+                Spacer()
+            }
+                .tabItem {
+                    VStack {
+                        Image("third")
+                        Text("Counter")
+                    }
+                }
+                .tag(3)
         }
     }
 }
